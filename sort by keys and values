@@ -1,0 +1,15 @@
+d = {"Banana": 30, "Apple": 50, "Orange": 40}
+
+# Sort by keys
+keys = sorted(d)
+
+print("Sorted by keys:")
+for k in keys:
+    print(k, d[k])
+
+# Sort by values
+items = sorted(d.items(), key=lambda x: x[1])
+
+print("Sorted by values:")
+for k, v in items:
+    print(k, v)
