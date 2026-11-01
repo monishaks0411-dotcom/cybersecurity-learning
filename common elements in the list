@@ -1,0 +1,22 @@
+list1 = []
+list2 = []
+
+n = int(input("Enter size of first list: "))
+for i in range(n):
+    list1.append(input("Enter item: "))
+
+m = int(input("Enter size of second list: "))
+for i in range(m):
+    list2.append(input("Enter item: "))
+
+has_common = False
+
+for item in list1:
+    if item in list2:
+        has_common = True
+        break
+
+if has_common:
+    print("Lists have common elements")
+else:
+    print("Lists have no common elements")
