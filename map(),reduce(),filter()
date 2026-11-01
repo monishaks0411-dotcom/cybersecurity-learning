@@ -1,0 +1,15 @@
+from functools import reduce
+
+nums = list(map(int, input().split()))
+
+# Find squares
+squares = list(map(lambda x: x**2, nums))
+print("Squares =", squares)
+
+# Filter odd squares
+odd = list(filter(lambda x: x % 2 != 0, squares))
+print("Odd Squares =", odd)
+
+# Find sum
+total = reduce(lambda a, b: a + b, nums)
+print("Sum =", total)
