@@ -1,0 +1,29 @@
+
+p = input("Enter a paragraph: ")
+
+words = []
+word = ""
+
+for ch in p:
+    if ch == " ":
+        if word != "":
+            words.append(word)
+        word = ""
+    else:
+        if 'A' <= ch <= 'Z':
+            ch = chr(ord(ch) + 32)
+        word = word + ch
+
+if word != "":
+    words.append(word)
+
+d = {}
+
+for w in words:
+    if w in d:
+        d[w] = d[w] + 1
+    else:
+        d[w] = 1
+
+for w in d:
+    print(w, ":", d[w])
