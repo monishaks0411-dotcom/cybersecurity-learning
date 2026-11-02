@@ -1,0 +1,18 @@
+
+first = []
+second = []
+merged = []
+
+n1 = int(input("Enter number of items in first list: "))
+for i in range(n1):
+    first.append(input("Enter item: "))
+
+n2 = int(input("Enter number of items in second list: "))
+for i in range(n2):
+    second.append(input("Enter item: "))
+
+for item in first + second:
+    if item not in merged:
+        merged.append(item)
+
+print("Merged list:", merged)
