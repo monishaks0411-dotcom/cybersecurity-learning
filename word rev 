@@ -1,17 +1,34 @@
 
+
 t = input("Enter sentence: ")
 
-# Reverse the entire string
+# Reverse the string
 rev = ""
-for ch in t:
-    rev = ch + rev
+i = 0
+
+while i < len(t):
+    rev = t[i] + rev
+    i = i + 1
 
 print(rev)
 
 # Reverse the order of words
-words = t.split()
+words = []
+word = ""
+
+for ch in t:
+    if ch == " ":
+        if word != "":
+            words.append(word)
+            word = ""
+    else:
+        word = word + ch
+
+if word != "":
+    words.append(word)
 
 i = len(words) - 1
+
 while i >= 0:
     print(words[i], end=" ")
     i = i - 1
